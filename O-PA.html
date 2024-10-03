@@ -1,0 +1,1053 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="description" content="Progressive Autoregressive Video Diffusion Models">
+    <meta name="keywords" content="long video generation, diffusion models">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+
+    <script async src="https://unpkg.com/es-module-shims@1.8.0/dist/es-module-shims.js"></script>
+
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+    <style>
+        model-viewer {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+
+    <script>
+      $(function () {
+        var includes = $('[data-include]')
+        $.each(includes, function () {
+          var file = $(this).data('include') + '.html'
+          $(this).load(file)
+          console.log(file);
+        })
+      })
+    </script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.156.1/build/three.module.js",
+          "three/controls/OrbitControls": "https://unpkg.com/three@0.156.1/examples/jsm/controls/OrbitControls.js",
+          "three/libs/stats": "https://unpkg.com/three@0.156.1/examples/jsm/libs/stats.module.js"
+        }
+      }
+    </script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+    <style>
+        model-viewer {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+
+    <base href="https://huggingface.co/datasets/progressive-autoregressive-vdm/pavdm_results/resolve/main/O-PA/">
+    <title>O-PA (ours) Results</title>
+
+  </head>
+
+  <body>
+    <script>
+        function toggleImages(img1_id, img2_id) {
+            var img1 = document.getElementById(img1_id);
+            var img2 = document.getElementById(img2_id);
+            img1.style.display = (img1.style.display === 'none' ? 'block' : 'none');
+            img2.style.display = (img2.style.display === 'none' ? 'block' : 'none');
+        }
+        </script>
+
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title">
+                <span class="dnerf">Progressive Autoregressive Video Diffusion Models</span>
+              </h1>
+
+              <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                Anonymous authors
+              </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+
+        <div class="column has-text-centered">
+          <div class="is-size-3 publication-authors">
+          <span class="author-block">
+            O-PA (ours) Results
+          </span>
+          </div>
+          <h4 class="subtitle is-4">
+            <center>O is the Open-Sora v1.2 base model, without any finetuning. PA stands to Progressive Autoregressive.</center>
+          </h4>
+        </div>
+
+    <table style="table-layout: fixed;border-collapse: collapse; margin: 25px 0; font-size: 0.9em; font-family: sans-serif; min-width: 400px; box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);">
+      <tbody>
+        <tr>
+          <td style="width: 848px; max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">[001/040] Drone view of waves crashing against the rugged cliffs along Big Surâ€™s garay point beach. The crashing blue waters create white-tipped waves, while the golden light of the setting sun illuminates the rocky shore. A small island with a lighthouse sits in the distance, and green shrubbery covers the cliffâ€™s edge. The steep drop from the road down to the beach is a dramatic feat, with the cliff's edges jutting out over the sea. This is a view that captures the raw beauty of the coast and the rugged landscape of the Pacific Coast Highway.</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_1_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_1_col_0.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_1_col_1.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_1_col_1.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="width: 848px; max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">[002/040] Tour of an art gallery with many beautiful works of art in different styles.</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_2_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_2_col_0.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_2_col_1.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_2_col_1.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="width: 848px; max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">[003/040] The Glenfinnan Viaduct is a historic railway bridge in Scotland, UK, that crosses over the west highland line between the towns of Mallaig and Fort William. It is a stunning sight as a steam train leaves the bridge, traveling over the arch-covered viaduct. The landscape is dotted with lush greenery and rocky mountains, creating a picturesque backdrop for the train journey. The sky is blue and the sun is shining, making for a beautiful day to explore this majestic spot.</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_3_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_3_col_0.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_3_col_1.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_3_col_1.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="width: 848px; max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">[004/040] A stylish woman walks down a Tokyo street filled with warm glowing neon and animated city signage. She wears a black leather jacket, a long red dress, and black boots, and carries a black purse. She wears sunglasses and red lipstick. She walks confidently and casually. The street is damp and reflective, creating a mirror effect of the colorful lights. Many pedestrians walk about.</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_4_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_4_col_0.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_4_col_1.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_4_col_1.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="width: 848px; max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">[005/040] The camera follows behind a white vintage SUV with a black roof rack as it speeds up a steep dirt road surrounded by pine trees on a steep mountain slope, dust kicks up from itâ€™s tires, the sunlight shines on the SUV as it speeds along the dirt road, casting a warm glow over the scene. The dirt road curves gently into the distance, with no other cars or vehicles in sight. The trees on either side of the road are redwoods, with patches of greenery scattered throughout. The car is seen from the rear following the curve with ease, making it seem as if it is on a rugged drive through the rugged terrain. The dirt road itself is surrounded by steep hills and mountains, with a clear blue sky above with wispy clouds.</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_5_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_5_col_0.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_5_col_1.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_5_col_1.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="width: 848px; max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">[006/040] The camera rotates around a large stack of vintage televisions all showing different programs â€” 1950s sci-fi movies, horror movies, news, static, a 1970s sitcom, etc, set inside a large New York museum gallery.</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_6_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_6_col_0.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_6_col_1.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_6_col_1.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="width: 848px; max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">[007/040] Historical footage of California during the gold rush.</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_7_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_7_col_0.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_7_col_1.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_7_col_1.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="width: 848px; max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">[008/040] A stop motion animation of a flower growing out of the windowsill of a suburban house.</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_8_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_8_col_0.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_8_col_1.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_8_col_1.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="width: 848px; max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">[009/040] A beautiful homemade video showing the people of Lagos, Nigeria in the year 2056. Shot with a mobile phone camera.</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_9_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_9_col_0.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_9_col_1.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_9_col_1.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="width: 848px; max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">[010/040] A young man at his 20s is sitting on a piece of cloud in the sky, reading a book.</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_10_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_10_col_0.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_10_col_1.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_10_col_1.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="width: 848px; max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">[011/040] Reflections in the window of a train traveling through the Tokyo suburbs.</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_11_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_11_col_0.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_11_col_1.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_11_col_1.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="width: 848px; max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">[012/040] A drone camera circles around a beautiful historic church built on a rocky outcropping along the Amalfi Coast, the view showcases historic and magnificent architectural details and tiered pathways and patios, waves are seen crashing against the rocks below as the view overlooks the horizon of the coastal waters and hilly landscapes of the Amalfi Coast Italy, several distant people are seen walking and enjoying vistas on patios of the dramatic ocean views, the warm glow of the afternoon sun creates a magical and romantic feeling to the scene, the view is stunning captured with beautiful photography.</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_12_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_12_col_0.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_12_col_1.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_12_col_1.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="width: 848px; max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">[013/040] A Chinese Lunar New Year celebration video with Chinese Dragon.</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_13_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_13_col_0.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_13_col_1.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_13_col_1.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="width: 848px; max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">[014/040] Beautiful, snowy Tokyo city is bustling. The camera moves through the bustling city street, following several people enjoying the beautiful snowy weather and shopping at nearby stalls. Gorgeous sakura petals are flying through the wind along with snowflakes.</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_14_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_14_col_0.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_14_col_1.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_14_col_1.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="width: 848px; max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">[015/040] An extreme close-up of an gray-haired man with a beard in his 60s, he is deep in thought pondering the history of the universe as he sits at a cafe in Paris, his eyes focus on people offscreen as they walk as he sits mostly motionless, he is dressed in a wool coat suit coat with a button-down shirt , he wears a brown beret and glasses and has a very professorial appearance, and the end he offers a subtle closed-mouth smile as if he found the answer to the mystery of life, the lighting is very cinematic with the golden light and the Parisian streets and city in the background, depth of field, cinematic 35mm film.</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_15_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_15_col_0.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_15_col_1.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_15_col_1.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="width: 848px; max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">[016/040] A litter of golden retriever puppies playing in the snow. Their heads pop out of the snow, covered in.</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_16_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_16_col_0.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_16_col_1.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_16_col_1.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="width: 848px; max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">[017/040] The video depicts a man navigating through a post-apocalyptic environment, armed with a gun and a melee weapon. He moves cautiously through a desolate area filled with debris, abandoned vehicles, and scattered bodies. The man encounters and engages in combat with zombie-like creatures, using both his gun and melee attacks to fend them off. The atmosphere is tense and dark, with a gloomy, overcast sky and a sense of impending danger.</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_17_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_17_col_0.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_17_col_1.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_17_col_1.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="width: 848px; max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">[018/040] A player navigating through various urban environments in a first-person shooter game. The player engages in combat scenarios, moving from outdoor settings with modern buildings and streets to indoor locations such as a hotel lobby and a dimly lit corridor. The action is intense and fast-paced, with the player frequently encountering and neutralizing enemies using different firearms. Visual effects such as muzzle flashes, bullet impacts, and blood splatters enhance the realism of the combat. The game interface includes a heads-up display (HUD) showing ammunition count, a mini-map, and other game-related information.</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_18_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_18_col_0.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_18_col_1.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_18_col_1.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="width: 848px; max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">[019/040] A vibrant urban scene where a person holding the camera is walking along a city street bustling with life and activity. The street is lined with lush green trees and parked cars, reflecting a typical sunny day in a lively neighborhood. The person moves steadily through the scene, navigating between the roadside and the moving traffic, providing a dynamic perspective of city life. As the video progresses, the viewer is introduced to various elements of the urban landscape, including pedestrians going about their day, outdoor recreational areas with people relaxing, and the architectural backdrop of residential and commercial buildings.</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_19_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_19_col_0.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_19_col_1.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_19_col_1.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="width: 848px; max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">[020/040] A thrilling mountain biking experience, where a group of bikers navigates a rugged trail set amidst a breathtaking mountainous landscape. The bikers, clad in protective gear and brightly colored athletic wear, tackle the uneven, rocky terrain with skill and agility. As they progress, the trail presents varying challenges, from narrow dirt paths to sections strewn with loose stones, requiring careful maneuvering and balance. The surrounding scenery is a blend of lush greenery and stark mountain peaks, providing a stunning backdrop to the adrenaline-fueled action. The bikers' shadows dance on the ground, hinting at the bright and clear weather conditions that accentuate the vividness of the natural environment.</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_20_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_20_col_0.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_20_col_1.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_20_col_1.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="width: 848px; max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">[021/040] A bustling narrow street lined with various shops and cafes, with people leisurely walking along the sidewalk. The street is vibrant and lively, with a mix of locals and tourists enjoying the sunny day. The buildings on either side are a blend of modern and traditional architecture, featuring colorful facades and large windows displaying merchandise. The atmosphere is casual and relaxed, with some people stopping to window shop or chat, while others are seen walking purposefully. The video transitions smoothly, showing different parts of the street and the diverse crowd that populates it.</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_21_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_21_col_0.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_21_col_1.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_21_col_1.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="width: 848px; max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">[022/040] The video provides a detailed exploration of a large yellow construction machine, showcasing various components and mechanisms. Initially, the video focuses on the weathered and rusty parts of the machine, emphasizing the textures and signs of wear. As the sequence progresses, the camera moves to highlight the operational aspects of the machine, including its hydraulics, wheels, and control systems. The close-up shots reveal intricate details such as bolts, hoses, and mechanical linkages, providing a comprehensive view of the machine's construction and functionality.</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_22_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_22_col_0.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_22_col_1.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_22_col_1.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="width: 848px; max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">[023/040] A bustling Christmas market at night, with people walking down a street lined with festive stalls. The market is adorned with colorful lights and decorations, creating a warm and inviting atmosphere. Various stalls display an array of goods, including handmade crafts, ornaments, and food items. Shoppers, dressed in winter attire, browse the stalls, engaging with vendors and examining the merchandise. The scene is lively and vibrant, with the soft glow of the market lights contrasting against the dark night sky.</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_23_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_23_col_0.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_23_col_1.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_23_col_1.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="width: 848px; max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">[024/040] A young man jogging down a suburban street at sunset. He is dressed in a blue sweatshirt with a prominent letter 'M' on the front, paired with dark pants. The setting sun casts a soft, warm glow over the scene, enhancing the tranquil suburban backdrop. As the man runs, his movement is fluid and steady, indicating he is comfortable and possibly in the midst of a routine exercise.</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_24_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_24_col_0.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_24_col_1.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_24_col_1.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="width: 848px; max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">[025/040] A person practicing Balance Beam.</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_25_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_25_col_0.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_25_col_1.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_25_col_1.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="width: 848px; max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">[026/040] A person practicing Playing Guitar.</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_26_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_26_col_0.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_26_col_1.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_26_col_1.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="width: 848px; max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">[027/040] A person practicing Typing.</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_27_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_27_col_0.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_27_col_1.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_27_col_1.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="width: 848px; max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">[028/040] A person practicing Tai Chi.</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_28_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_28_col_0.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_28_col_1.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_28_col_1.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="width: 848px; max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">[029/040] A person practicing Hula Hoop.</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_29_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_29_col_0.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_29_col_1.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_29_col_1.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="width: 848px; max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">[030/040] A person practicing Boxing Speed Bag.</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_30_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_30_col_0.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_30_col_1.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_30_col_1.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="width: 848px; max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">[031/040] A person practicing Fencing.</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_31_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_31_col_0.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_31_col_1.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_31_col_1.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="width: 848px; max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">[032/040] A person practicing Front Crawl.</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_32_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_32_col_0.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_32_col_1.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_32_col_1.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="width: 848px; max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">[033/040] A cat sitting in a sunlit field, surrounded by soft-focus grasses and natural elements. The sunlight gives the image a dreamy and serene atmosphere, highlighting the cat's fur and creating a gentle, warm ambiance.</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_33_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_33_col_0.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_33_col_1.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_33_col_1.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="width: 848px; max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">[034/040] A serene scene unfolds as an airplane descends gently towards the runway. In the foreground, a warm, sunlit field sways in the breeze, resembling the golden tones of a cat's fur basking in soft, ambient light. The background focuses on the plane gliding effortlessly, its shadow sweeping over the field as it approaches for a smooth landing. The camera captures the majestic aircraft from a side profile, touching down against a pastel sky, with subtle reflections of the sunset blending into the environment. The peaceful setting contrasts the motion of the plane, adding a dreamy, cinematic quality to the landing sequence.</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_34_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_34_col_0.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_34_col_1.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_34_col_1.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="width: 848px; max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">[035/040] Underwater footage captures two sharks moving gracefully to the right, their sleek bodies slicing through the deep blue water. As they swim side by side along a coral-covered reef, the gentle flow of the current accentuates their power and elegance. The camera follows their synchronized movements, highlighting their smooth, effortless motion as they patrol the depths of the ocean. The scene conveys a sense of calm yet intense focus, perfect for illustrating the majesty of marine life in its natural habitat.</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_35_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_35_col_0.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_35_col_1.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_35_col_1.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="width: 848px; max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">[036/040] The camera captures an intense, front-facing shot of a surfer riding inside a massive wave, moving directly toward the lens. Encased in the barrel, the surfer skillfully balances, hands brushing the water as the tunnel of the wave wraps around them, creating a mesmerizing, hollow effect. Water droplets shimmer under the filtered sunlight, adding to the drama of the scene. As the surfer advances, the wave's power and force are on full display, emphasizing the thrill and skill required to master the art of surfing in such challenging conditions.</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_36_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_36_col_0.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_36_col_1.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_36_col_1.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="width: 848px; max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">[037/040] A group of elegant swans glide gracefully to the left across a calm lake, their white feathers contrasting beautifully against the deep blue water. The swans move in unison, their long necks curving gently as they paddle along, creating subtle ripples that follow their path. The serene scene captures their peaceful motion and the tranquility of nature, perfect for conveying a sense of harmony and grace as the swans navigate through the shimmering waters.</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_37_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_37_col_0.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_37_col_1.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_37_col_1.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="width: 848px; max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">[038/040] An aerial shot captures a lone car driving steadily forward along a remote dirt road. The camera moves seamlessly along with the vehicle, maintaining a consistent distance as it navigates through a rugged landscape. Snow patches line the side of the road, contrasting with the earthy tones of the barren terrain. The carâ€™s shadow follows closely, emphasizing its solitary journey through the expansive, open environment. This dynamic perspective evokes a sense of exploration and adventure, perfectly illustrating a road trip through uncharted territory.</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_38_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_38_col_0.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_38_col_1.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_38_col_1.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="width: 848px; max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">[039/040] A close-up shot focuses on a person taking a bite of a delicious slice of pizza. The camera zooms in to capture the moment as the personâ€™s lips part, and they sink their teeth into the crispy crust topped with rich tomato sauce, melted cheese, and savory mushrooms. The textures and colors of the pizza are highlighted, making it look irresistible. The slow motion of the bite emphasizes the satisfaction and enjoyment of the food, perfect for showcasing the pleasure of indulging in a hot, freshly baked pizza.</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_39_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_39_col_0.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_39_col_1.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_39_col_1.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="width: 848px; max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">[040/040] A skier carves smoothly down a snowy slope, surrounded by majestic mountain peaks in the distance. The skierâ€™s form is precise, leaning into the turn as snow sprays up behind them, emphasizing their speed and control. The camera follows their descent, capturing the excitement and thrill of skiing through the crisp, clear mountain air. The bright blue sky and pristine white snow create a vivid contrast, showcasing the beauty of the alpine environment and the exhilaration of gliding down the slopes.</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_40_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_40_col_0.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_40_col_1.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="width:424px" loop="loop" muted="muted" src="row_40_col_1.mp4" width="width:424px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
+              <p>
+                We borrow the source code of this website from <a
+                  href="https://github.com/nerfies/nerfies.github.io">HERE</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

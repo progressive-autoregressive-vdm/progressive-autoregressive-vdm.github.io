@@ -1,0 +1,1015 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="description" content="Progressive Autoregressive Video Diffusion Models">
+    <meta name="keywords" content="long video generation, diffusion models">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+
+    <script async src="https://unpkg.com/es-module-shims@1.8.0/dist/es-module-shims.js"></script>
+
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+    <style>
+        model-viewer {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+
+    <script>
+      $(function () {
+        var includes = $('[data-include]')
+        $.each(includes, function () {
+          var file = $(this).data('include') + '.html'
+          $(this).load(file)
+          console.log(file);
+        })
+      })
+    </script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.156.1/build/three.module.js",
+          "three/controls/OrbitControls": "https://unpkg.com/three@0.156.1/examples/jsm/controls/OrbitControls.js",
+          "three/libs/stats": "https://unpkg.com/three@0.156.1/examples/jsm/libs/stats.module.js"
+        }
+      }
+    </script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+    <style>
+        model-viewer {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+
+    <base href="https://huggingface.co/datasets/progressive-autoregressive-vdm/pavdm_results/resolve/main/StreamingT2V/">
+    <title>StreamingT2V Results</title>
+
+  </head>
+
+  <body>
+    <script>
+        function toggleImages(img1_id, img2_id) {
+            var img1 = document.getElementById(img1_id);
+            var img2 = document.getElementById(img2_id);
+            img1.style.display = (img1.style.display === 'none' ? 'block' : 'none');
+            img2.style.display = (img2.style.display === 'none' ? 'block' : 'none');
+        }
+        </script>
+
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title">
+                <span class="dnerf">Progressive Autoregressive Video Diffusion Models</span>
+              </h1>
+
+              <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                Anonymous authors
+              </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+
+        <div class="column has-text-centered">
+          <div class="is-size-3 publication-authors">
+            <span class="author-block">
+              StreamingT2V Results
+            </span>
+          </div>
+          <div class="is-size-4 publication-authors">
+            <span class="author-block">
+              Note that StreamingT2V does not use text-prompts as condition.
+            </span>
+          </div>
+        </div>
+
+    <table style="table-layout: fixed;border-collapse: collapse; margin: 25px 0; font-size: 0.9em; font-family: sans-serif; min-width: 400px; box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);">
+      <tbody>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">Example 1</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_1_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="360px" loop="loop" muted="muted" src="row_1_col_0.mp4" width="360px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;"> </td>
+          <td>
+            <div class="magnify-lens">
+              <div style="text-align: center; vertical-align: middle;">StreamingT2V</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">Example 2</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_2_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="360px" loop="loop" muted="muted" src="row_2_col_0.mp4" width="360px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;"> </td>
+          <td>
+            <div class="magnify-lens">
+              <div style="text-align: center; vertical-align: middle;">StreamingT2V</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">Example 3</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_3_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="360px" loop="loop" muted="muted" src="row_3_col_0.mp4" width="360px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;"> </td>
+          <td>
+            <div class="magnify-lens">
+              <div style="text-align: center; vertical-align: middle;">StreamingT2V</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">Example 4</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_4_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="360px" loop="loop" muted="muted" src="row_4_col_0.mp4" width="360px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;"> </td>
+          <td>
+            <div class="magnify-lens">
+              <div style="text-align: center; vertical-align: middle;">StreamingT2V</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">Example 5</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_5_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="360px" loop="loop" muted="muted" src="row_5_col_0.mp4" width="360px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;"> </td>
+          <td>
+            <div class="magnify-lens">
+              <div style="text-align: center; vertical-align: middle;">StreamingT2V</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">Example 6</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_6_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="360px" loop="loop" muted="muted" src="row_6_col_0.mp4" width="360px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;"> </td>
+          <td>
+            <div class="magnify-lens">
+              <div style="text-align: center; vertical-align: middle;">StreamingT2V</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">Example 7</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_7_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="360px" loop="loop" muted="muted" src="row_7_col_0.mp4" width="360px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;"> </td>
+          <td>
+            <div class="magnify-lens">
+              <div style="text-align: center; vertical-align: middle;">StreamingT2V</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">Example 8</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_8_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="360px" loop="loop" muted="muted" src="row_8_col_0.mp4" width="360px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;"> </td>
+          <td>
+            <div class="magnify-lens">
+              <div style="text-align: center; vertical-align: middle;">StreamingT2V</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">Example 9</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_9_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="360px" loop="loop" muted="muted" src="row_9_col_0.mp4" width="360px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;"> </td>
+          <td>
+            <div class="magnify-lens">
+              <div style="text-align: center; vertical-align: middle;">StreamingT2V</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">Example 10</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_10_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="360px" loop="loop" muted="muted" src="row_10_col_0.mp4" width="360px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;"> </td>
+          <td>
+            <div class="magnify-lens">
+              <div style="text-align: center; vertical-align: middle;">StreamingT2V</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">Example 11</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_11_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="360px" loop="loop" muted="muted" src="row_11_col_0.mp4" width="360px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;"> </td>
+          <td>
+            <div class="magnify-lens">
+              <div style="text-align: center; vertical-align: middle;">StreamingT2V</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">Example 12</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_12_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="360px" loop="loop" muted="muted" src="row_12_col_0.mp4" width="360px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;"> </td>
+          <td>
+            <div class="magnify-lens">
+              <div style="text-align: center; vertical-align: middle;">StreamingT2V</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">Example 13</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_13_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="360px" loop="loop" muted="muted" src="row_13_col_0.mp4" width="360px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;"> </td>
+          <td>
+            <div class="magnify-lens">
+              <div style="text-align: center; vertical-align: middle;">StreamingT2V</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">Example 14</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_14_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="360px" loop="loop" muted="muted" src="row_14_col_0.mp4" width="360px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;"> </td>
+          <td>
+            <div class="magnify-lens">
+              <div style="text-align: center; vertical-align: middle;">StreamingT2V</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">Example 15</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_15_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="360px" loop="loop" muted="muted" src="row_15_col_0.mp4" width="360px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;"> </td>
+          <td>
+            <div class="magnify-lens">
+              <div style="text-align: center; vertical-align: middle;">StreamingT2V</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">Example 16</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_16_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="360px" loop="loop" muted="muted" src="row_16_col_0.mp4" width="360px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;"> </td>
+          <td>
+            <div class="magnify-lens">
+              <div style="text-align: center; vertical-align: middle;">StreamingT2V</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">Example 17</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_17_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="360px" loop="loop" muted="muted" src="row_17_col_0.mp4" width="360px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;"> </td>
+          <td>
+            <div class="magnify-lens">
+              <div style="text-align: center; vertical-align: middle;">StreamingT2V</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">Example 18</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_18_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="360px" loop="loop" muted="muted" src="row_18_col_0.mp4" width="360px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;"> </td>
+          <td>
+            <div class="magnify-lens">
+              <div style="text-align: center; vertical-align: middle;">StreamingT2V</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">Example 19</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_19_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="360px" loop="loop" muted="muted" src="row_19_col_0.mp4" width="360px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;"> </td>
+          <td>
+            <div class="magnify-lens">
+              <div style="text-align: center; vertical-align: middle;">StreamingT2V</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">Example 20</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_20_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="360px" loop="loop" muted="muted" src="row_20_col_0.mp4" width="360px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;"> </td>
+          <td>
+            <div class="magnify-lens">
+              <div style="text-align: center; vertical-align: middle;">StreamingT2V</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">Example 21</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_21_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="360px" loop="loop" muted="muted" src="row_21_col_0.mp4" width="360px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;"> </td>
+          <td>
+            <div class="magnify-lens">
+              <div style="text-align: center; vertical-align: middle;">StreamingT2V</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">Example 22</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_22_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="360px" loop="loop" muted="muted" src="row_22_col_0.mp4" width="360px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;"> </td>
+          <td>
+            <div class="magnify-lens">
+              <div style="text-align: center; vertical-align: middle;">StreamingT2V</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">Example 23</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_23_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="360px" loop="loop" muted="muted" src="row_23_col_0.mp4" width="360px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;"> </td>
+          <td>
+            <div class="magnify-lens">
+              <div style="text-align: center; vertical-align: middle;">StreamingT2V</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">Example 24</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_24_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="360px" loop="loop" muted="muted" src="row_24_col_0.mp4" width="360px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;"> </td>
+          <td>
+            <div class="magnify-lens">
+              <div style="text-align: center; vertical-align: middle;">StreamingT2V</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">Example 25</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_25_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="360px" loop="loop" muted="muted" src="row_25_col_0.mp4" width="360px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;"> </td>
+          <td>
+            <div class="magnify-lens">
+              <div style="text-align: center; vertical-align: middle;">StreamingT2V</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">Example 26</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_26_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="360px" loop="loop" muted="muted" src="row_26_col_0.mp4" width="360px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;"> </td>
+          <td>
+            <div class="magnify-lens">
+              <div style="text-align: center; vertical-align: middle;">StreamingT2V</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">Example 27</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_27_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="360px" loop="loop" muted="muted" src="row_27_col_0.mp4" width="360px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;"> </td>
+          <td>
+            <div class="magnify-lens">
+              <div style="text-align: center; vertical-align: middle;">StreamingT2V</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">Example 28</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_28_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="360px" loop="loop" muted="muted" src="row_28_col_0.mp4" width="360px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;"> </td>
+          <td>
+            <div class="magnify-lens">
+              <div style="text-align: center; vertical-align: middle;">StreamingT2V</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">Example 29</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_29_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="360px" loop="loop" muted="muted" src="row_29_col_0.mp4" width="360px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;"> </td>
+          <td>
+            <div class="magnify-lens">
+              <div style="text-align: center; vertical-align: middle;">StreamingT2V</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">Example 30</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_30_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="360px" loop="loop" muted="muted" src="row_30_col_0.mp4" width="360px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;"> </td>
+          <td>
+            <div class="magnify-lens">
+              <div style="text-align: center; vertical-align: middle;">StreamingT2V</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">Example 31</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_31_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="360px" loop="loop" muted="muted" src="row_31_col_0.mp4" width="360px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;"> </td>
+          <td>
+            <div class="magnify-lens">
+              <div style="text-align: center; vertical-align: middle;">StreamingT2V</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">Example 32</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_32_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="360px" loop="loop" muted="muted" src="row_32_col_0.mp4" width="360px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;"> </td>
+          <td>
+            <div class="magnify-lens">
+              <div style="text-align: center; vertical-align: middle;">StreamingT2V</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">Example 33</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_33_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="360px" loop="loop" muted="muted" src="row_33_col_0.mp4" width="360px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;"> </td>
+          <td>
+            <div class="magnify-lens">
+              <div style="text-align: center; vertical-align: middle;">StreamingT2V</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">Example 34</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_34_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="360px" loop="loop" muted="muted" src="row_34_col_0.mp4" width="360px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;"> </td>
+          <td>
+            <div class="magnify-lens">
+              <div style="text-align: center; vertical-align: middle;">StreamingT2V</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">Example 35</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_35_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="360px" loop="loop" muted="muted" src="row_35_col_0.mp4" width="360px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;"> </td>
+          <td>
+            <div class="magnify-lens">
+              <div style="text-align: center; vertical-align: middle;">StreamingT2V</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">Example 36</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_36_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="360px" loop="loop" muted="muted" src="row_36_col_0.mp4" width="360px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;"> </td>
+          <td>
+            <div class="magnify-lens">
+              <div style="text-align: center; vertical-align: middle;">StreamingT2V</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">Example 37</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_37_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="360px" loop="loop" muted="muted" src="row_37_col_0.mp4" width="360px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;"> </td>
+          <td>
+            <div class="magnify-lens">
+              <div style="text-align: center; vertical-align: middle;">StreamingT2V</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">Example 38</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_38_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="360px" loop="loop" muted="muted" src="row_38_col_0.mp4" width="360px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;"> </td>
+          <td>
+            <div class="magnify-lens">
+              <div style="text-align: center; vertical-align: middle;">StreamingT2V</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">Example 39</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_39_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="360px" loop="loop" muted="muted" src="row_39_col_0.mp4" width="360px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;"> </td>
+          <td>
+            <div class="magnify-lens">
+              <div style="text-align: center; vertical-align: middle;">StreamingT2V</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;">Example 40</td>
+          <td>
+            <div class="magnify-lens">
+              <div class="magnify">
+                <a href="row_40_col_0.mp4" target="_blank">
+                  <video autoplay="autoplay" controls="controls" height="360px" loop="loop" muted="muted" src="row_40_col_0.mp4" width="360px"></video>
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="max-width: 250px; text-align: center; vertical-align: middle; white-space: pre-wrap; word-wrap: break-word;"> </td>
+          <td>
+            <div class="magnify-lens">
+              <div style="text-align: center; vertical-align: middle;">StreamingT2V</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
+              <p>
+                We borrow the source code of this website from <a
+                  href="https://github.com/nerfies/nerfies.github.io">HERE</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

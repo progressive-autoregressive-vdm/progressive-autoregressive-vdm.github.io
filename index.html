@@ -3,11 +3,397 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="description" content="Progressive Autoregressive Video Diffusion Models">
+  <meta name="keywords" content="long video generation, diffusion models">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Progressive Autoregressive Video Diffusion Models </title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <script async src="https://unpkg.com/es-module-shims@1.8.0/dist/es-module-shims.js"></script>
+
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+  <style>
+      model-viewer {
+          width: 300px;
+          height: 300px;
+      }
+  </style>
+
+
+  <script>
+
+    $(function () {
+      var includes = $('[data-include]')
+      $.each(includes, function () {
+        var file = $(this).data('include') + '.html'
+        $(this).load(file)
+        console.log(file);
+      })
+    })
+
+  </script>
+
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.156.1/build/three.module.js",
+        "three/controls/OrbitControls": "https://unpkg.com/three@0.156.1/examples/jsm/controls/OrbitControls.js",
+        "three/libs/stats": "https://unpkg.com/three@0.156.1/examples/jsm/libs/stats.module.js"
+      }
+    }
+  </script>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+  <style>
+      model-viewer {
+          width: 300px;
+          height: 300px;
+      }
+  </style>
 
 </head>
 
 <body>
-<h1>Progressive Autoregressive Video Diffusion Models</h1>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">
+            <span class="dnerf">Progressive Autoregressive Video Diffusion Models</span>
+          </h1>
+
+          <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                Anonymous authors
+              </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Current frontier video diffusion models have demonstrated remarkable results at generating high-quality
+            videos. However, they can only generate short video clips, normally around 5 seconds or 120 frames, due to
+            computation limitations during training. In this work, we show that existing models can be naturally adapted
+            to autoregressive video diffusion models without changing the architectures. Our key idea is to assign the
+            latent frames with progressively increasing noise levels rather than a single noise level. Thus, each latent
+            can condition on all the less noisy latents before it and provide condition for all the more noisy latents
+            after it. Such progressive video denoising allows our models to autoregressively generate frames without
+            quality degradation. We present state-of-the-art results on long video generation at 1 minute (1440 frames
+            at 24 FPS).
+
+
+            <br><br>
+          </p>
+        </div>
+        <div class="is-size-5 publication-authors">
+          <span class="author-block">
+            All results on this website are uncurated samples from the models.
+          </span>
+        </div>
+        </object>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- --------------- M-PA -------------- -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">
+      <center>M-PA (ours) Results</center>
+    </h2>
+    <h4 class="subtitle is-4">
+      <center>M is a modified variant of Open-Sora. PA stands for Progressive Autoregressive.</center>
+    </h4>
+    <h4 class="subtitle is-4">
+      <center><a href="./M-PA.html">(Click to see more results)</a></center>
+    </h4>
+    <div class="hero-body">
+
+      <div class="columns is-1 is-multiline is-mobile">
+        <div class="column pb-0 mb-0 is-one-third">
+          <video id="teaser" autoplay muted loop playsinline controls height="100%">
+            <source
+                src="https://huggingface.co/datasets/progressive-autoregressive-vdm/pavdm_results/resolve/main/M-PA/row_1_col_1.mp4"
+                type="video/mp4">
+          </video>
+        </div>
+
+        <div class="column pb-0 mb-0 is-one-third">
+          <video id="teaser" autoplay muted loop playsinline controls height="100%">
+            <source
+                src="https://huggingface.co/datasets/progressive-autoregressive-vdm/pavdm_results/resolve/main/M-PA/row_4_col_0.mp4"
+                type="video/mp4">
+          </video>
+        </div>
+
+        <div class="column pb-0 mb-0 is-one-third">
+          <video id="teaser" autoplay muted loop playsinline controls height="100%">
+            <source
+                src="https://huggingface.co/datasets/progressive-autoregressive-vdm/pavdm_results/resolve/main/M-PA/row_5_col_1.mp4"
+                type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- --------------- M-RW -------------- -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">
+      <center>M-RW Results</center>
+    </h2>
+    <h4 class="subtitle is-4">
+      <center>M is a modified variant of Open-Sora. RW stands for Replacement-with-noise.</center>
+    </h4>
+    <h4 class="subtitle is-4">
+      <center><a href="./M-RW.html">(Click to see more results)</a></center>
+    </h4>
+    <div class="hero-body">
+
+      <div class="columns is-1 is-multiline is-mobile">
+        <div class="column pb-0 mb-0 is-one-third">
+          <video id="teaser" autoplay muted loop playsinline controls height="100%">
+            <source
+                src="https://huggingface.co/datasets/progressive-autoregressive-vdm/pavdm_results/resolve/main/M-RW/row_1_col_1.mp4"
+                type="video/mp4">
+          </video>
+        </div>
+
+        <div class="column pb-0 mb-0 is-one-third">
+          <video id="teaser" autoplay muted loop playsinline controls height="100%">
+            <source
+                src="https://huggingface.co/datasets/progressive-autoregressive-vdm/pavdm_results/resolve/main/M-RW/row_4_col_0.mp4"
+                type="video/mp4">
+          </video>
+        </div>
+
+        <div class="column pb-0 mb-0 is-one-third">
+          <video id="teaser" autoplay muted loop playsinline controls height="100%">
+            <source
+                src="https://huggingface.co/datasets/progressive-autoregressive-vdm/pavdm_results/resolve/main/M-RW/row_5_col_1.mp4"
+                type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- --------------- O-PA -------------- -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">
+      <center>O-PA (ours) Results</center>
+    </h2>
+    <h4 class="subtitle is-4">
+      <center>O is the Open-Sora v1.2 base model, without any finetuning. PA stands to Progressive Autoregressive.</center>
+    </h4>
+    <h4 class="subtitle is-4">
+      <center><a href="./O-PA.html">(Click to see more results)</a></center>
+    </h4>
+    <div class="hero-body">
+
+      <div class="columns is-1 is-multiline is-mobile">
+        <div class="column pb-0 mb-0 is-one-third">
+          <video id="teaser" autoplay muted loop playsinline controls height="100%">
+            <source
+                src="https://huggingface.co/datasets/progressive-autoregressive-vdm/pavdm_results/resolve/main/O-PA/row_1_col_1.mp4"
+                type="video/mp4">
+          </video>
+        </div>
+
+        <div class="column pb-0 mb-0 is-one-third">
+          <video id="teaser" autoplay muted loop playsinline controls height="100%">
+            <source
+                src="https://huggingface.co/datasets/progressive-autoregressive-vdm/pavdm_results/resolve/main/O-PA/row_4_col_1.mp4"
+                type="video/mp4">
+          </video>
+        </div>
+
+        <div class="column pb-0 mb-0 is-one-third">
+          <video id="teaser" autoplay muted loop playsinline controls height="100%">
+            <source
+                src="https://huggingface.co/datasets/progressive-autoregressive-vdm/pavdm_results/resolve/main/O-PA/row_5_col_0.mp4"
+                type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- --------------- O-RN -------------- -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">
+      <center>O-RN Results</center>
+    </h2>
+    <h4 class="subtitle is-4">
+      <center>O is the Open-Sora v1.2 base model, without any finetuning. RN stands to Replacement-without-noise.</center>
+    </h4>
+    <h4 class="subtitle is-4">
+      <center><a href="./O-RN.html">(Click to see more results)</a></center>
+    </h4>
+    <div class="hero-body">
+
+      <div class="columns is-1 is-multiline is-mobile">
+        <div class="column pb-0 mb-0 is-one-third">
+          <video id="teaser" autoplay muted loop playsinline controls height="100%">
+            <source
+                src="https://huggingface.co/datasets/progressive-autoregressive-vdm/pavdm_results/resolve/main/O-RN/row_1_col_0.mp4"
+                type="video/mp4">
+          </video>
+        </div>
+
+        <div class="column pb-0 mb-0 is-one-third">
+          <video id="teaser" autoplay muted loop playsinline controls height="100%">
+            <source
+                src="https://huggingface.co/datasets/progressive-autoregressive-vdm/pavdm_results/resolve/main/O-RN/row_4_col_1.mp4"
+                type="video/mp4">
+          </video>
+        </div>
+
+        <div class="column pb-0 mb-0 is-one-third">
+          <video id="teaser" autoplay muted loop playsinline controls height="100%">
+            <source
+                src="https://huggingface.co/datasets/progressive-autoregressive-vdm/pavdm_results/resolve/main/O-RN/row_5_col_1.mp4"
+                type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- --------------- StreamingT2V -------------- -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">
+      <center>StreamingT2V Results</center>
+    </h2>
+    <h4 class="subtitle is-4">
+      <center><a href="./StreamingT2V.html">(Click to see more results)</a></center>
+    </h4>
+    <div class="hero-body">
+
+      <div class="columns is-1 is-multiline is-mobile">
+        <div class="column pb-0 mb-0 is-one-third">
+          <video id="teaser" autoplay muted loop playsinline controls height="100%">
+            <source
+                src="https://huggingface.co/datasets/progressive-autoregressive-vdm/pavdm_results/resolve/main/StreamingT2V/row_1_col_0.mp4"
+                type="video/mp4">
+          </video>
+        </div>
+
+        <div class="column pb-0 mb-0 is-one-third">
+          <video id="teaser" autoplay muted loop playsinline controls height="100%">
+            <source
+                src="https://huggingface.co/datasets/progressive-autoregressive-vdm/pavdm_results/resolve/main/StreamingT2V/row_4_col_0.mp4"
+                type="video/mp4">
+          </video>
+        </div>
+
+        <div class="column pb-0 mb-0 is-one-third">
+          <video id="teaser" autoplay muted loop playsinline controls height="100%">
+            <source
+                src="https://huggingface.co/datasets/progressive-autoregressive-vdm/pavdm_results/resolve/main/StreamingT2V/row_5_col_0.mp4"
+                type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- --------------- SVD -------------- -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">
+      <center>Stable Video Diffusion Results</center>
+    </h2>
+    <h4 class="subtitle is-4">
+      <center><a href="./SVD.html">(Click to see more results)</a></center>
+    </h4>
+    <div class="hero-body">
+
+      <div class="columns is-1 is-multiline is-mobile">
+        <div class="column pb-0 mb-0 is-one-third">
+          <video id="teaser" autoplay muted loop playsinline controls height="100%">
+            <source
+                src="https://huggingface.co/datasets/progressive-autoregressive-vdm/pavdm_results/resolve/main/SVD/row_1_col_0.mp4"
+                type="video/mp4">
+          </video>
+        </div>
+
+        <div class="column pb-0 mb-0 is-one-third">
+          <video id="teaser" autoplay muted loop playsinline controls height="100%">
+            <source
+                src="https://huggingface.co/datasets/progressive-autoregressive-vdm/pavdm_results/resolve/main/SVD/row_4_col_0.mp4"
+                type="video/mp4">
+          </video>
+        </div>
+
+        <div class="column pb-0 mb-0 is-one-third">
+          <video id="teaser" autoplay muted loop playsinline controls height="100%">
+            <source
+                src="https://huggingface.co/datasets/progressive-autoregressive-vdm/pavdm_results/resolve/main/SVD/row_5_col_0.mp4"
+                type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            We borrow the source code of this website from <a
+              href="https://github.com/nerfies/nerfies.github.io">HERE</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
 </body>
 
 </html>
